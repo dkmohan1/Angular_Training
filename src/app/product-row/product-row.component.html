@@ -1,0 +1,17 @@
+    <label> Name   Price</label>
+    <fieldset style="border-color: turquoise;">
+        <label>{{products.category}}</label>
+    </fieldset>   
+    
+    <div *ngFor="let item of products.list; index as i" >
+        <div *ngIf="_selector.isOnlyStockVisible">                  
+          
+        <fieldset style="border-color: red;">
+    
+    <label>{{item.name}}  </label>    
+    <label>{{item.stock}}</label>
+</fieldset>
+</div>
+    </div>
+    <p>{{_selector.isOnlyStockVisible}}</p>
+    
